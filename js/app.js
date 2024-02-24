@@ -9,9 +9,9 @@ function validarCampo(event) {
     var valor = campo.value.trim();
 
     if (!valor) {
-        mostrarAlerta('Por favor, completa todos los campos antes de enviar el correo.', 'red');
+        mostrarAlerta('Por favor, completa todos los campos antes de enviar el correo.', '#FF4C60');
     } else if (campo.id === 'from_name' && !validarFormatoCorreo(valor)) {
-        mostrarAlerta('Por favor, ingresa una dirección de correo electrónico válida.', 'red');
+        mostrarAlerta('Por favor, ingresa una dirección de correo electrónico válida.', '#FF4C60');
     } else {
         ocultarAlerta();
     }
@@ -34,10 +34,10 @@ function enviarCorreo() {
         var valor = obtenerValorCampo(campos[i]);
 
         if (!valor) {
-            mostrarAlerta('Por favor, completa todos los campos antes de enviar el correo.', 'red');
+            mostrarAlerta('Por favor, completa todos los campos antes de enviar el correo.', '#FF4C60');
             return false;
         } else if (campos[i] === 'from_name' && !validarFormatoCorreo(valor)) {
-            mostrarAlerta('Por favor, ingresa una dirección de correo electrónico válida.', 'red');
+            mostrarAlerta('Por favor, ingresa una dirección de correo electrónico válida.', '#FF4C60');
             return false;
         }
     }
@@ -74,7 +74,7 @@ function enviarCorreo() {
         })
         .catch(function (error) {
             console.error('Error al enviar el correo:', error);
-            mostrarAlerta('Error al enviar el correo. Por favor, inténtalo de nuevo más tarde.', 'red');
+            mostrarAlerta('Error al enviar el correo. Por favor, inténtalo de nuevo más tarde.', '#FF4C60');
         })
         .finally(function () {
             // Esperar 5 segundos y luego ocultar la alerta y resetear el formulario

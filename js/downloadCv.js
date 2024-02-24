@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         // URL de tu archivo PDF (reemplaza con tu ruta)
-        var cvURL = 'cv/cv.pdf';
+        var cvURL = 'cv/cv-eber-garcia.pdf';
 
         // Abrir el archivo en una nueva pestaña
         window.open(cvURL, '_blank');
